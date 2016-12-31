@@ -1,33 +1,24 @@
-<h2>Accounts</h2>
-<!-- <ul class="accounts">
-  <li *ngFor="let account of accounts | async" (click)="onSelect(account)" [class.selected]="account === selectedaccount">
-    <span class="account-element">
-      <span class="badge">Name</span> {{account.Name}}
-    </span>
-        <span class="account-element">
-      <span class="badge">Phone</span> {{account.Phone}}
-    </span>
-  </li>
-</ul> -->
-
-    <table class="table table-bordered table-striped">
-      <thead class="thead-default">
-        <tr>
-          <th>Name</th>
-          <th>Phone Number</th>
-          <th>Website</th>
-        </tr>
-      </thead>
-      <tbody *ngIf="(accounts | async)?.length === 0">
-        <tr>
-          <td colspan="5">There are no accounts in the DB. Add a new account below.</td>
-        </tr>  
-      </tbody>
-      <tbody *ngIf="(accounts | async)?.length > 0">
-        <tr *ngFor="let account of accounts | async">
-          <td>{{account.Name}}</td>
-          <td>{{account.Phone}}</td>
-          <td>{{account.Website}}</td>
-        </tr>  
-      </tbody>
-    </table>
+<md-card>Accounts</md-card>
+<md-card>
+  <table class="table table-bordered table-striped">
+    <thead class="thead-default">
+      <tr>
+        <th>Name</th>
+        <th>Phone Number</th>
+        <th>Website</th>
+      </tr>
+    </thead>
+    <tbody *ngIf="(accounts | async)?.length === 0">
+      <tr>
+        <td colspan="5">There are no accounts in the DB. Add a new account below.</td>
+      </tr>
+    </tbody>
+    <tbody *ngIf="(accounts | async)?.length > 0">
+      <tr *ngFor="let account of accounts | async">
+        <td>{{account.Name}}</td>
+        <td>{{account.Phone}}</td>
+        <td>{{account.Website}}</td>
+      </tr>
+    </tbody>
+  </table>
+</md-card>

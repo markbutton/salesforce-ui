@@ -12,7 +12,8 @@ export class AccountService {
   private options = new RequestOptions({ headers: this.headers });
 
   // private instance variable to hold base url
-  private accountsUrl = 'http://salesforcedemo.cloudhub.io/salesforce';
+  private accountsUrl = 'http://salesforcedemo.cloudhub.io/accounts';
+  // private accountsUrl = 'http://localhost:8081/accounts';
 
   constructor(private http: Http) { }
 
